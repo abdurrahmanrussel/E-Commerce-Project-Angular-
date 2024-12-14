@@ -1,0 +1,664 @@
+<app-header *ngIf="showHeader">
+</app-header>
+
+
+<div class="content" *ngIf="showContent">
+
+<!--<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="language">
+                    <ul>
+                        <li (click)="drop('language')" >
+                            English <i class="fa fa-caret-down"></i>
+                            <div class="dropdown" *ngIf="id=== 'language' ">
+                                <ul>
+                                    <li>
+                                        English
+                                    </li>
+
+                                    <li>
+                                        Bangla
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li (click)="drop('currency')">
+                            TK <i class="fa fa-caret-down"></i>
+                            <div class="dropdown" *ngIf="id=== 'currency' ">
+                                <ul>
+                                    <li>
+                                        TK
+                                    </li>
+
+                                    <li>
+                                        USD
+                                    </li>
+
+                                    <li>
+                                        EURO
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-8 text-end">
+                <div class="social-menu">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0)" class="login" >
+                                Login
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header> -->
+
+<section class="banner">
+    <owl-carousel-o [options]="bannerSlider">
+        <ng-template carouselSlide> <img src="../assets/banner/img1.jpg"> </ng-template>  
+        <ng-template carouselSlide><img src="../assets/banner/img2.jpeg"> </ng-template>  
+        <ng-template carouselSlide><img src="../assets/banner/img3.jpg"> </ng-template>  
+      </owl-carousel-o>
+</section>
+
+<section class="best-selling">
+
+    <div class="container">
+        <div class="best-selling-container">
+            <div class="sale-price">
+                Sale <strong>
+                    14%
+                </strong>
+            </div>
+
+            <div class="selling-col-1">
+                <div class="selling-left">
+                    <ul>
+                        <li>
+                            <span class="count-date"> {{days}} </span>
+                            <span class="count-day">Days</span>
+                        </li>
+                        <li>
+                            <span class="count-date"> {{hours}} </span>
+                            <span class="count-day">Hours</span>
+                        </li>
+                        <li>
+                            <span class="count-date"> {{mins}} </span>
+                            <span class="count-day">Minutes</span>
+                        </li>
+
+                        <li>
+                            <span class="count-date"> {{secs}} </span>
+                            <span class="count-day">Seconds</span>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="selling-col-2">
+                <div class="selling-img">
+                    <img src="../assets/best-selling/img1.jpeg" alt="best-selling">
+                </div>
+            </div>
+
+            <div class="selling-col-3">
+                <div class="selling-heading">
+                    <a href="javascript:void(0);">Samsung mobile</a>
+                    <div class="selling-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <p> {{content | custompipe}} </p>
+                <h3>
+                    <span class="selling-amount">৳23000</span>
+                    <span class="selling-discount">৳25000</span>
+                </h3>
+
+                <div class="selling-button">
+                    <a href="javascript:void(0);" class="cart-btn">
+                            <i class="fa fa-shopping-cart"></i> Add to Cart
+                    </a>
+                    <button type="button" class="main-btn">
+                        <a href="javascript:void(0);"><i class="fa fa-heart"></i></a>
+                        <a href="javascript:void(0);"><i class="fa fa-search"></i></a>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<section class="testimonial">
+    <div class="containers">
+        <owl-carousel-o [options]="testimonialSlider">
+            <ng-template carouselSlide>
+                <div class="testimonial-image">
+                    <img src="../assets/testimonial/m1.jpeg" alt="testimonial">
+                </div>
+                <div class="testimonial-content text-center">
+                    <h2>Maruf Hossain</h2>
+                    <h3>Web Designer</h3>
+                    <p>Maecenas ornare sagittis nisi, id scelerisque dolor
+                         dignissim in. Duis et gravida nisi, vitae pharetra lorem. 
+                         Donec id pretium ligula, eu varius dolor. Donec enim quam, 
+                         accumsan eget hendrerit et, bibendum vel lorem.</p>
+                </div>
+            </ng-template> 
+            <ng-template carouselSlide>
+                <div class="testimonial-image">
+                    <img src="../assets/testimonial/m2.jpg" alt="testimonial">
+                </div>
+                <div class="testimonial-content text-center">
+                    <h2>Hridoy Khan</h2>
+                    <h3>Student</h3>
+                    <p>Vivamus in enim nec nunc vehicula tincidunt sed at est. 
+                        Etiam ut sagittis mauris. Nam sem ante, vehicula eu ultrices vitae, 
+                        tempus at sapien. Phasellus quis eros sed erat posuere viverra.</p>
+                </div>
+            </ng-template> 
+
+            <ng-template carouselSlide>
+                <div class="testimonial-image">
+                    <img src="../assets/testimonial/m3.jpeg" alt="testimonial">
+                </div>
+                <div class="testimonial-content text-center">
+                    <h2>Mohammad Ashraf</h2>
+                    <h3>Politician</h3>
+                    <p>Cras vestibulum enim vitae metus vestibulum, ut varius purus gravida. 
+                        Donec interdum vestibulum euismod. Morbi imperdiet, arcu sed pulvinar 
+                        fringilla, ex sapien hendrerit purus, sed volutpat velit justo ac enim.</p>
+                </div>
+            </ng-template> 
+
+          </owl-carousel-o>
+
+    </div>
+</section>
+
+<section class="bg-color">
+    <div class="containers">
+        <div class="title">
+            <p>The Best seller of BD</p>
+            <h1><span>Best </span> Seller </h1>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-main">
+                        <div class="discount">9%</div>
+                        <div class="label label-green">Pre-Order</div>
+                        <div class="product-container">
+                        <div class="p" (mouseover)="changeImage($event)" ><img src= "../assets/img1.jpeg" alt="Product"> </div>
+                        <div class="p" (mouseover)="changeImage($event)"><img src= "../assets/img2.jpg" alt="Product"> </div>
+                        <div class="p" (mouseover)="changeImage($event)"><img src= "../assets/img3.webp" alt="Product"> </div>
+                        </div>
+                        <div class="image">
+                        <img src="{{url}}" alt="Image">
+                        </div>
+                        <div class="cart-line"></div>
+                        <div class="cart-item">
+                        <ul>
+                            <li> <a href=""> <i class="fa fa-shopping-basket"></i> </a> </li>
+                            <li> <a href=""> <i class="fa fa-heart"></i> </a> </li>
+                            <li> <a href=""> <i class="fa fa-search"></i> </a> </li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="content">
+                        <a href=""> Bird </a>
+                        <div class="rating">
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p> <span class="money">৳700.00</span> <span class="old-price">৳800.00</span> </p> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-main">
+                        <div class="discount">20%</div>
+                        <div class="label label-green">Pre-Order</div>
+                        <div class="product-container">
+                        <div class="p" (mouseover)="changeImage2($event)" ><img src= "../assets/img4.jpg" alt="Product"> </div>
+                        <div class="p" (mouseover)="changeImage2($event)"><img src= "../assets/img5.jpg" alt="Product"> </div>
+                        <div class="p" (mouseover)="changeImage2($event)"><img src= "../assets/img6.jpg" alt="Product"> </div>
+                        </div>
+                        <div class="image">
+                        <img src="{{url2}}" alt="Image">
+                        </div>
+                        <div class="cart-line"></div>
+                        <div class="cart-item">
+                        <ul>
+                            <li> <a href=""> <i class="fa fa-shopping-basket"></i> </a> </li>
+                            <li> <a href=""> <i class="fa fa-heart"></i> </a> </li>
+                            <li> <a href=""> <i class="fa fa-search"></i> </a> </li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="content">
+                        <a href=""> Clock</a>
+                        <div class="rating">
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p> <span class="money">৳1200.00</span> <span class="old-price">৳1500.00</span> </p> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-main">
+                        <div class="discount">9%</div>
+                        <div class="label label-green">Pre-Order</div>
+                        <div class="product-container">
+                        <div class="p" (mouseover)="changeImage3($event)" ><img src= "../assets/img7.jpg" alt="Product"> </div>
+                        <div class="p" (mouseover)="changeImage3($event)"><img src= "../assets/img8.jpeg" alt="Product"> </div>
+                        <div class="p" (mouseover)="changeImage3($event)"><img src= "../assets/img9.webp" alt="Product"> </div>
+                        </div>
+                        <div class="image">
+                        <img src="{{url3}}" alt="Image">
+                        </div>
+                        <div class="cart-line"></div>
+                        <div class="cart-item">
+                        <ul>
+                            <li> <a href=""> <i class="fa fa-shopping-basket"></i> </a> </li>
+                            <li> <a href=""> <i class="fa fa-heart"></i> </a> </li>
+                            <li> <a href=""> <i class="fa fa-search"></i> </a> </li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="content">
+                        <a href=""> Laptop</a>
+                        <div class="rating">
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p> <span class="money">৳75000.00</span> <span class="old-price">৳8000.00</span> </p> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-main">
+                        <div class="discount">16%</div>
+                        <div class="label label-green">Pre-Order</div>
+                        <div class="product-container">
+                        <div class="p" (mouseover)="changeImage4($event)" ><img src= "../assets/img10.webp" alt="Product"> </div>
+                        <div class="p" (mouseover)="changeImage4($event)"><img src= "../assets/img11.webp" alt="Product"> </div>
+                        <div class="p" (mouseover)="changeImage4($event)"><img src= "../assets/img12.webp" alt="Product"> </div>
+                        </div>
+                        <div class="image">
+                        <img src="{{url4}}" alt="Image">
+                        </div>
+                        <div class="cart-line"></div>
+                        <div class="cart-item">
+                        <ul>
+                            <li> <a href=""> <i class="fa fa-shopping-basket"></i> </a> </li>
+                            <li> <a href=""> <i class="fa fa-heart"></i> </a> </li>
+                            <li> <a href=""> <i class="fa fa-search"></i> </a> </li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="content">
+                        <a href=""> Accurium</a>
+                        <div class="rating">
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p> <span class="money">৳650.00</span> <span class="old-price">৳800.00</span> </p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="policy">
+    <div class="containers text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="policy-card">
+                    <div class="round">
+                        <div class="round-icon">
+                            <i class="fa fa-car"></i>
+                        </div>
+                    </div>
+                    <h2>Free Shipping &amp; Return</h2>
+                    <p>Free shipping in all BD  </p>
+                </div>    
+            </div>
+            
+            <div class="col-md-4">
+                <div class="policy-card">
+                    <div class="round">
+                        <div class="round-icon">
+                            <i class="fa fa-refresh"></i>
+                        </div>
+                    </div>
+                    <h2>Money Back Guarantee</h2>
+                    <p>#0 days money back gurantee </p>
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="policy-card">
+                    <div class="round">
+                        <div class="round-icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                    </div>
+                    <h2>Online Support 24/24</h2>
+                    <p>We support online support 24 hours of a day </p>
+                </div> 
+            </div>
+         </div>   
+    </div>
+</section>
+
+<section class="policy-product">
+    <div class="containers">
+        <div class="bg-position">
+            <owl-carousel-o [options]="policyOptions">
+                <ng-template carouselSlide>
+                    <div class="policy-p-card">
+                        <div class="date">
+                           <h3>25</h3>
+                           <h4>June</h4>
+                       </div>
+   
+                       <div class="policy-img">
+                           <img src="../assets/policy/p1.jpg"  alt="Image P1">
+                       </div>
+                       <h2>Lorem ipsum dolor sit amet</h2>
+                       <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis 
+                           praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias 
+                           excepturi sint occaecati cupiditate non provident.</p>
+                       <a href="" class="read-more">Read More <i class="fa fa-caret-right"></i> </a>
+                   </div>
+                </ng-template>  
+                <ng-template carouselSlide>
+                    <div class="policy-p-card">
+                        <div class="date">
+                           <h3>26</h3>
+                           <h4>June</h4>
+                       </div>
+    
+                       <div class="policy-img">
+                           <img src="../assets/policy/p2.jpg"  alt="Image P2">
+                       </div>
+                       <h2>Heading 2</h2>
+                       <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis 
+                           praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias 
+                           excepturi sint occaecati cupiditate non provident.</p>
+                       <a href="" class="read-more">Read More <i class="fa fa-caret-right"></i> </a>
+                   </div>
+                </ng-template>  
+                <ng-template carouselSlide>
+                    <div class="policy-p-card">
+                        <div class="date">
+                           <h3>27</h3>
+                           <h4>June</h4>
+                       </div>
+    
+                       <div class="policy-img">
+                           <img src="../assets/policy/p3.jpg"  alt="Image P3">
+                       </div>
+                       <h2>New idea about phone</h2>
+                       <p> adipisci velit, sed quia non numquam eius modi tempora incidunt
+                         ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima 
+                         veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+                       <a href="" class="read-more">Read More <i class="fa fa-caret-right"></i> </a>
+                   </div>
+                </ng-template>  
+                <ng-template carouselSlide>
+                    <div class="policy-p-card">
+                        <div class="date">
+                           <h3>25</h3>
+                           <h4>June</h4>
+                       </div>
+   
+                       <div class="policy-img">
+                           <img src="../assets/policy/p1.jpg"  alt="Image P1">
+                       </div>
+                       <h2>Lorem ipsum dolor sit amet</h2>
+                       <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis 
+                           praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias 
+                           excepturi sint occaecati cupiditate non provident.</p>
+                       <a href="" class="read-more">Read More <i class="fa fa-caret-right"></i> </a>
+                   </div>
+                </ng-template> 
+              </owl-carousel-o>
+        </div>
+    </div>
+</section>
+
+<section class="partners">
+    <div class="containers">
+
+        <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide><img src="../assets/partner/p1.png" alt="p1"></ng-template>  
+            <ng-template carouselSlide><img src="../assets/partner/p2.png" alt="p2"></ng-template>  
+            <ng-template carouselSlide> <img src="../assets/partner/p3.png" alt="p3"></ng-template>  
+            <ng-template carouselSlide><img src="../assets/partner/p4.png" alt="p4"></ng-template>  
+            <ng-template carouselSlide><img src="../assets/partner/p5.png" alt="p5"></ng-template>  
+            <ng-template carouselSlide> <img src="../assets/partner/p6.png" alt="p6"></ng-template> 
+          </owl-carousel-o>
+    </div>
+</section>
+
+<section class="footer-top">
+    <div class="containers">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="footer-logo">
+                    <img src="../assets/footer-logo.jpg" alt="Fotter logo">
+                </div>
+                <div class="footer-top-menu">
+                    <ul>
+                        <li>
+                            <i class="fa fa-home"></i>
+                            <span class="heading">Address:</span>
+                            <span class="address">Rajshahi, Bangladesh</span>
+                        </li>
+
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <span class="heading">Mail us: </span>
+                            <span class="email">
+                                <a href="mailto:abdurrahmanrussel77@gmail.com">abdurrahmanrussel77gmail.com</a>
+                            </span>
+                        </li>
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            <span class="heading">Phone: </span>
+                            <span class="number">
+                                <a href="tel:01714042230">01714042230</a>
+                            </span>
+                        </li>
+
+                        <li>
+                            <a href="">
+                                <img src="../assets/payment/p1.png" alt="payment">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="footer-all-menu">
+                    <h2>My Account</h2>
+                    <ul>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">Information</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">Order History</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">My Wishlist</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">See Map</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="footer-all-menu">
+                    <h2>Information</h2>
+                    <ul>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">Cart</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">Product Support</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">Pc setup Support</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">Services</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">Extended Services plans
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="footer-all-menu">
+                    <h2>Our Services</h2>
+                    <ul>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">Information</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">About</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">Shipping guide</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">Store location</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">Customer Point</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="footer-middle">
+    <div class="containers">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Sign up for exclussive news letter</h2>
+            </div>
+
+            <div class="col-md-4">
+                <input type="mail" class="input" placeholder="Email">
+                <button type="button" class="btn"> <i class="fa fa-location-arrow"></i> </button>
+                
+            </div>
+            <div class="col-md-4">
+                <div class="social text-center">
+                    <ul>
+                        <li><a href="https://www.facebook.com/aburrahmanrussel/"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="containers text-center">
+        <p> Designed by 1910055, <a href="https://www.facebook.com/aburrahmanrussel/">Abdur Rahman Russel </a> All right reserve  </p>
+    </div>
+</footer>
+</div>
+ 
+<router-outlet></router-outlet>
+
