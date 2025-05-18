@@ -1,45 +1,49 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private http:HttpClient) { 
+  constructor(private http: HttpClient) {}
 
+  apiurl = 'http://localhost:3000/user';
+
+  RegisterUser(inputData: any) {
+    return this.http.post(this.apiurl, inputData);
   }
 
-  apiurl='http://localhost:3000/user';
+  GetUserbyCode(id: any) {
+    // Fixed endpoint to match JSON structure
+    return this.http.get(`${this.apiurl}?id=${id}`);
+  }
 
-  RegisterUser(inputdata:any){
-    return this.http.post(this.apiurl,inputdata)
-  }
-  GetUserbyCode(id:any){
-    return this.http.get(this.apiurl+'/'+id);
-  }
-  Getall(){
+  Getall() {
     return this.http.get(this.apiurl);
   }
-  updateuser(id:any,inputdata:any){
-    return this.http.put(this.apiurl+'/'+id,inputdata);
+
+  updateuser(id: any, inputData: any) {
+    return this.http.put(`${this.apiurl}/${id}`, inputData);
   }
-  getuserrole(){
+
+  getuserrole() {
     return this.http.get('http://localhost:3000/role');
   }
-  isloggedin(){
-    return sessionStorage.getItem('username')!=null;
+
+  isloggedin() {
+    return sessionStorage.getItem('username') != null;
   }
-  getrole(){
-    return sessionStorage.getItem('role')!=null?sessionStorage.getItem('role')?.toString():'';
+
+  getrole() {
+    return sessionStorage.getItem('role') ?? '';
   }
-  GetAllCustomer(){
+
+  GetAllCustomer() {
     return this.http.get('http://localhost:3000/customer');
   }
 
-  Getaccessbyrole(role:any,menu:any){
-    return this.http.get('http://localhost:3000/roleaccess?role='+role+'&menu='+menu)
+  Getaccessbyrole(role: any, menu: any) {
+    return this.http.get(`http://localhost:3000/roleaccess?role=${role}&menu=${menu}`);
   }
-
 }

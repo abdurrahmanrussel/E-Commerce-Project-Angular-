@@ -1,24 +1,77 @@
-
-.header {
-    background-color: rgb(34, 102, 228);
-    padding: 20px 0;
+/* Navbar background with gradient */
+.navbar.bg-primary {
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
 }
 
-ul li {
-    list-style-type: none;
-    display: inline-block;
-    margin-right: 10px;
-    text-align: center;
-    cursor:pointer;
+/* Logo styling */
+.logo-img {
+  height: 40px;
+  width: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-ul li:hover {
-    background-color: green;
+/* Brand styling */
+.navbar-brand {
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  color: #fff !important;
+  font-family: 'Poppins', sans-serif;
 }
 
-.nav{
-    position: sticky;
-    top: 0;
-    
+/* Nav links */
+.nav-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #f0f0f0 !important;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
 }
 
+.nav-link:hover,
+.nav-link.active {
+  color: #ffde59 !important;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Search input styling */
+.form-control-sm {
+  width: 200px;
+  transition: width 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
+}
+
+.form-control-sm:focus {
+  width: 240px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+/* Button styling */
+.btn-outline-light {
+  border-color: #fff;
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 20px;
+}
+
+.btn-outline-light:hover {
+  background-color: #ffde59;
+  color: #2a5298;
+  border-color: #ffde59;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-nav {
+    gap: 10px;
+  }
+  .nav-link {
+    font-size: 1rem;
+  }
+  .form-control-sm {
+    width: 140px;
+  }
+  .form-control-sm:focus {
+    width: 180px;
+  }
+}

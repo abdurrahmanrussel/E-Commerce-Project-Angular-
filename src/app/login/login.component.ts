@@ -10,37 +10,48 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor(private builder: FormBuilder, private toastr: ToastrService, 
-    private service: AuthService, private router: Router) {
-      sessionStorage.clear();
-}
-
-result: any;
+  constructor(
+    private builder: FormBuilder,
+    private toastr: ToastrService,
+    private service: AuthService,
+    private router: Router
+  ) {
+    sessionStorage.clear();
+  }
 
   loginform = this.builder.group({
-    id: this.builder.control('', Validators.required),
-    password: this.builder.control('', Validators.required)
+    id: ['', Validators.required],
+    password: ['', Validators.required]
   });
 
   proceedlogin() {
     if (this.loginform.valid) {
-      this.service.GetUserbyCode(this.loginform.value.id).subscribe(item => {
-        this.result = item;
-        if (this.result.password === this.loginform.value.password) {
-          if (this.result.isactive) {
-            sessionStorage.setItem('username',this.result.id);
-            sessionStorage.setItem('role',this.result.role);
-            this.router.navigate(['']);
+      const userId = this.loginform.value.id;
+      this.service.GetUserbyCode(userId).subscribe({
+        next: (data: any) => {
+          if (data.length > 0) {
+            const user = data[0];
+            if (user.password === this.loginform.value.password) {
+              if (user.isactive) {
+                sessionStorage.setItem('username', user.id);
+                sessionStorage.setItem('role', user.role);
+                this.router.navigate(['']);
+              } else {
+                this.toastr.error('Please contact Admin', 'Inactive User');
+              }
+            } else {
+              this.toastr.error('Invalid credentials');
+            }
           } else {
-            this.toastr.error('Please contact Admin', 'InActive User');
+            this.toastr.error('User not found');
           }
-        } else {
-          this.toastr.error('Invalid credentials');
+        },
+        error: () => {
+          this.toastr.error('Server error or user not found');
         }
       });
     } else {
-      this.toastr.warning('Please enter valid data.')
+      this.toastr.warning('Please enter valid data.');
     }
   }
 }
-

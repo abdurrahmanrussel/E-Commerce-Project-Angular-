@@ -10,32 +10,30 @@ import { HeaderComponent } from './header/header.component';
 import { AddComponent } from './add/add.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CustompipePipe } from './custompipe.pipe';
-import {CommonModule} from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { MaterialModule } from 'src/material.module';
-import {ReactiveFormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { RegisterComponent } from './register/register.component';
 import { UserlistingComponent } from './userlisting/userlisting.component';
 import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    AboutComponent,
-    ContactComponent,
     HeaderComponent,
     AddComponent,
     CustompipePipe,
     LoginComponent,
     RegisterComponent,
     UserlistingComponent,
-    UpdatepopupComponent
+    UpdatepopupComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -44,16 +42,19 @@ import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
     AppRoutingModule,
     RouterModule,
     CommonModule,
-    RouterModule,
     MaterialModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ToastrModule.forRoot()
-    
+    ToastrModule.forRoot({
+      positionClass: 'toast-center-center',
+      timeOut: 4000,
+      closeButton: true,
+      progressBar: true,
+      progressAnimation: 'increasing',
+      preventDuplicates: true,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
-  showHeader= true;
-}
+export class AppModule { }

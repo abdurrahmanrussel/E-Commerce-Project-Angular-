@@ -4,9 +4,8 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'custompipe'
 })
 export class CustompipePipe implements PipeTransform {
-
-  transform(value: string): any {
-    return value.substr(0,42);
+  transform(value: any, ...args: any[]): any {
+    // your pipe logic here
+    return value;
   }
-
 }

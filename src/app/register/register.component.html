@@ -1,42 +1,35 @@
-<mat-card>
-    <mat-card-header>
-        <h2>Registeration</h2>
-    </mat-card-header>
-    <mat-card-content>
-      
-        <form class="example-form" [formGroup]="registerform" (ngSubmit)="proceedregister()">
-            <mat-form-field class="example-full-width">
-              <mat-label>Username</mat-label>
-              <input matInput formControlName="id" >
-            </mat-form-field>
-            <br>
-            <mat-form-field class="example-full-width">
-                <mat-label>Name</mat-label>
-                <input matInput formControlName="name" >
-              </mat-form-field>
-              <br>
-              <mat-form-field class="example-full-width">
-                <mat-label>Password</mat-label>
-                <input type="password" matInput formControlName="password" >
-              </mat-form-field>
-              <br>
-              <mat-form-field class="example-full-width">
-                <mat-label>Email</mat-label>
-                <input matInput formControlName="email" >
-              </mat-form-field>
-              <br>
-              <mat-radio-group formControlName="gender" aria-label="Select an option">
-                <mat-radio-button value="male">Male</mat-radio-button>
-                <mat-radio-button value="female">Female</mat-radio-button>
-              </mat-radio-group>
-              <div>
-                <br>
-                <button mat-raised-button color="primary">Submit</button>
-                <a routerLink="/login" mat-raised-button color="accent">Back to Login</a>
-              </div>
-          </form>
-    </mat-card-content>
-  </mat-card>
+<div class="auth-container">
+  <div class="login-card">
+    <h2 class="auth-title">🌟 Create Your Account</h2>
+    <p class="auth-subtitle">Join us and explore all the features!</p>
 
+    <form [formGroup]="registerform" (ngSubmit)="proceedregister()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="id">
+      </mat-form-field>
 
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name">
+      </mat-form-field>
 
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput formControlName="password">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" type="email">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="auth-btn">Register</button>
+
+      <p class="switch-auth">
+        Already have an account? 
+        <a routerLink="/login">Go to Login</a>
+      </p>
+    </form>
+  </div>
+</div>
