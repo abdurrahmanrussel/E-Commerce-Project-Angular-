@@ -74,16 +74,36 @@
       "gender": "male",
       "role": "user",
       "isactive": true
+    },
+    {
+      "id": "rabeya",
+      "name": "Rabea",
+      "password": "Ra@01714042230",
+      "email": "rabeya@gmail.com",
+      "gender": "female",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "check",
+      "name": "check",
+      "password": "Check@1234",
+      "email": "check@gmail.com",
+      "gender": "male",
+      "role": "user",
+      "isactive": true
     }
   ],
   "role": [
     {
       "code": "user",
-      "name": "User"
+      "name": "User",
+      "id": "2371"
     },
     {
       "code": "tech",
-      "name": "Technician"
+      "name": "Technician",
+      "id": "1773"
     }
   ]
 }
