@@ -1,0 +1,118 @@
+{
+  "user": [
+    {
+      "id": "admin1",
+      "name": "Admin1",
+      "password": "Russel@admin1",
+      "email": "abc@email.com",
+      "gender": "male",
+      "role": "admin",
+      "isactive": true
+    },
+    {
+      "id": "russel",
+      "name": "Abdur Rahman Russel",
+      "password": "Test@1234",
+      "email": "test@in.com",
+      "gender": "male",
+      "role": "tech",
+      "isactive": true
+    },
+    {
+      "id": "mizan",
+      "name": "Mizan Khan",
+      "password": "Test@1233",
+      "email": "te2@in.com",
+      "gender": "male",
+      "role": "tech",
+      "isactive": true,
+      "address": {
+        "area": "chennai"
+      }
+    },
+    {
+      "id": "tushar",
+      "name": "Tushar",
+      "password": "Test@1234",
+      "email": "te3@in.com",
+      "gender": "male",
+      "role": "tech",
+      "isactive": true,
+      "address": {
+        "area": "banglore"
+      }
+    },
+    {
+      "id": "checkuser",
+      "name": "User",
+      "password": "Test1@1234",
+      "email": "te4@in.com",
+      "gender": "male",
+      "role": "tech",
+      "isactive": true,
+      "address": {
+        "area": "banglore"
+      }
+    },
+    {
+      "id": "ntuser2",
+      "name": "ramesh2",
+      "password": "Test2@1234",
+      "email": "tem@in.com",
+      "gender": "male",
+      "role": "tech",
+      "isactive": true,
+      "address": {
+        "area": "banglore"
+      }
+    },
+    {
+      "id": "user10",
+      "name": "Amin",
+      "password": "Amin@1234",
+      "email": "amin@gmail.com",
+      "gender": "male",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "rabeya",
+      "name": "Rabea",
+      "password": "Ra@01714042230",
+      "email": "rabeya@gmail.com",
+      "gender": "female",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "check",
+      "name": "check",
+      "password": "Check@1234",
+      "email": "check@gmail.com",
+      "gender": "male",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "rabeya123",
+      "name": "Rabeya",
+      "password": "Ra@01402827287",
+      "email": "rabeya2230@gmail.com",
+      "gender": "male",
+      "role": "user",
+      "isactive": true
+    }
+  ],
+  "role": [
+    {
+      "code": "user",
+      "name": "User",
+      "id": "2371"
+    },
+    {
+      "code": "tech",
+      "name": "Technician",
+      "id": "1773"
+    }
+  ]
+}

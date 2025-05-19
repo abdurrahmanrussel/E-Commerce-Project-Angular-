@@ -1,0 +1,77 @@
+/* Main Container */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f02fc2, #6094ea);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Card Styling */
+.login-card {
+  background-color: #ffffff;
+  width: 420px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Title and Subtitle */
+.auth-title {
+  margin-bottom: 12px;
+  font-size: 2.2em;
+  color: #f02fc2;
+  font-weight: bold;
+}
+
+.auth-subtitle {
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 1.2em;
+}
+
+/* Input Fields */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+input.mat-input-element {
+  font-size: 1.2em;
+}
+
+/* Button Styling */
+.auth-btn {
+  width: 100%;
+  height: 50px;
+  font-size: 1.3em;
+  border-radius: 8px;
+  background-color: #f02fc2;
+  color: white;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.auth-btn:hover {
+  background-color: #d102ae;
+}
+
+/* Switch to Login */
+.switch-auth {
+  margin-top: 20px;
+  font-size: 1.1em;
+}
+
+.switch-auth a {
+  color: #f02fc2;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.switch-auth a:hover {
+  text-decoration: underline;
+}
