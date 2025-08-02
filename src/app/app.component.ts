@@ -220,7 +220,7 @@ partnerOptions: OwlOptions = {
 
   startCountdown() {
     this.countdownIntervalId = setInterval(() => {
-      const futureDate = new Date("July 15, 2025 23:59:59").getTime();
+      const futureDate = new Date("December 15, 2025 23:59:59").getTime();
       const today = new Date().getTime();
       const distance = futureDate - today;
 
